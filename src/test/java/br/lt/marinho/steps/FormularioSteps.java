@@ -15,7 +15,7 @@ public class FormularioSteps {
 
 	@Given("I access the form")
 	public void iAccessTheForm() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		m = new FormularioPage(driver);
 		m.acess();
