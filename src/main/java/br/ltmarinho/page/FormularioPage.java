@@ -10,9 +10,13 @@ public class FormularioPage {
 		Metodos = new FormularioMetodos(driver);
 	}
 	
+	/********* Acesso ************/	
+	
 	public void acess( ) {
 		Metodos.acess();
 	}
+	
+	/********* Combos with verify ************/
 
 	public void setMake() {
 		Metodos.selectCombo("make", "BMW");
@@ -56,6 +60,8 @@ public class FormularioPage {
 	
 	public void setCourtesyCar() {
 		Metodos.selectCombo("courtesycar", "Yes");
+		
+	/********* Radio and Check  with verify ************/		
 	}	
 	
 	public void setRightHandDriver() {
@@ -78,6 +84,8 @@ public class FormularioPage {
 	public void setSelectPriceOption() {
 		Metodos.clickRadioX("//*[@id='priceTable']/tfoot/tr/th[2]/label[4]/span");
 	}
+	
+	/********* Write with verify ************/
 		
 	public void setCylinderCapacity() {
 		Metodos.write("cylindercapacity", "400");
@@ -167,6 +175,8 @@ public class FormularioPage {
 		Metodos.write("Comments", "Comentario");
 	}
 	
+	/********* Click ************/
+	
 	public void clickNextEnterInsurantData() {
 		Metodos.clickButton("nextenterinsurantdata");
 	}
@@ -195,13 +205,13 @@ public class FormularioPage {
 		Metodos.clickButton("viewquote");
 	}
 	
+	/********* Upload ************/
+	
 	public void Upload() {
 		Metodos.upload();
 	}
 	
-	public void exitBrowser() {
-		Metodos.driver.quit();
-	}
+	/********* Waiting and Loading ************/
 	
 	public void waitingtoclicknext() {
 		Metodos.waitingtoclick("nextsendquote");
@@ -215,8 +225,16 @@ public class FormularioPage {
 		Metodos.waiting("//*[@id=\"LoadingPDF\"]");
 	}
 	
+	/********* Verify text ************/
+	
 	public void verifyText() {
 		Metodos.obteinText("/html/body/div[4]/h2[text()='Sending e-mail success!']");
+	}
+	
+	/********* Ending ************/
+	
+	public void exitBrowser() {
+		Metodos.driver.quit();
 	}
 		
 }

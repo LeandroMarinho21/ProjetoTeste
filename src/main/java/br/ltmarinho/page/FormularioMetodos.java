@@ -57,7 +57,7 @@ public class FormularioMetodos {
 		}
 		
 		
-		/********* Botao ************/
+		/********* Button ************/
 		
 		public void clickButton(String id) {
 			driver.findElement(By.id(id)).click();
@@ -86,7 +86,7 @@ public class FormularioMetodos {
 			chooseFile.sendKeys(System.getProperty("user.dir") + "\\foto\\carro.jpg");
 		}
 		
-		/********* Espera ************/
+		/********* Waiting and Loading ************/
 		
 		public void waitingtoclick(String id) {
 			WebDriverWait wait = new WebDriverWait(driver, 180);
