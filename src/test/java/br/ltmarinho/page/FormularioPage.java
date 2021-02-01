@@ -10,9 +10,9 @@ public class FormularioPage {
 		Metodos = new FormularioMetodos(driver);
 	}
 	
-	/********* Acesso ************/	
+	/********* Acesso e Driver ************/	
 	
-	public void acess( ) {
+	public void acess() {
 		Metodos.acess();
 	}
 	

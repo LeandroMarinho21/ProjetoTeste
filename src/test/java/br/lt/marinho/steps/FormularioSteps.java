@@ -5,9 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import br.ltmarinho.page.FormularioPage;
 import io.cucumber.java.After;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
 public class FormularioSteps {
 
@@ -16,12 +15,13 @@ public class FormularioSteps {
 
 	@Given("I access the form")
 	public void iAccessTheForm() {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		m = new FormularioPage(driver);
 		m.acess();
 	}
 
-	@When("I fill out the form Enter Vehicle Data")
+	@And("I fill out the form Enter Vehicle Data")
 	public void IFillOutTheFormEnterVehicleData() {
 		m.setMake();
 		m.setModel();
@@ -40,7 +40,7 @@ public class FormularioSteps {
 		m.clickNextEnterInsurantData();
 	}
 
-	@When("I fill out the form Enter Insert data")
+	@And("I fill out the form Enter Insert data")
 	public void iFillOutTheFormEnterInsertData() {
 		m.setFirstName();
 		m.setLastName();
@@ -57,7 +57,7 @@ public class FormularioSteps {
 		m.clickNextEnterProductData();
 	}
 
-	@When("I fill out the form Enter Product Data")
+	@And("I fill out the form Enter Product Data")
 	public void iFillOutTheFormEnterProductData() {
 		m.setStartDate();
 		m.setInsuranceSum();
@@ -68,14 +68,14 @@ public class FormularioSteps {
 		m.clickNextSelectPriceOption();
 	}
 
-	@When("I fill out the form Select Price Option")
+	@And("I fill out the form Select Price Option")
 	public void iFillOutTheFormSelectPriceOption() {
 		m.setSelectPriceOption();
 		m.waitingtoclicknext();
 		m.clickNextSendQuote();
 	}
 
-	@When("I fill out the form Send Quote")
+	@And("I fill out the form Send Quote")
 	public void iFillOutTheFormSendQuote() {
 		m.setEmail();
 		m.setPhone();
@@ -87,7 +87,7 @@ public class FormularioSteps {
 		m.loading();
 	}
 
-	@Then("I should see {string}")
+	@And("I should see {string}")
 	public void iShouldSee(String string) {
 		m.waitingtoclickconfirm();
 		m.verifyText();

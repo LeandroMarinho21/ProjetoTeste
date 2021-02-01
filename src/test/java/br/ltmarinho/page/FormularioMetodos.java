@@ -102,8 +102,7 @@ public class FormularioMetodos {
 			WebDriverWait wait = new WebDriverWait(driver, 180);
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(xpath)));
 		}
-							
-		
+						
 }
 
 
