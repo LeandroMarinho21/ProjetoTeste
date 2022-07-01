@@ -2,7 +2,6 @@ package br.lt.marinho.steps;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import br.ltmarinho.page.FormularioPage;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
@@ -10,11 +9,12 @@ import io.cucumber.java.en.Given;
 
 public class FormularioSteps {
 
-	private static WebDriver driver;
+	private static  WebDriver driver;
 	private static FormularioPage m;
 
 	@Given("I access the form")
 	public void iAccessTheForm() {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		m = new FormularioPage(driver);
 		m.acess();
